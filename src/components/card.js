@@ -6,7 +6,7 @@ const Card = props => {
     <div>
       <a href="" className="product">
         <figure className="product-image">
-          <img src={props.image} alt="" />
+          <img src={props.image} alt={props.name} />
         </figure>
         <span className="product-name">{props.name}</span>
         <span className="product-overlay">

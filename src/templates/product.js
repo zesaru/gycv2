@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Card from "../components/card"
+import Img from "gatsby-image"
+
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const query = graphql`
@@ -27,16 +29,28 @@ export const query = graphql`
               url
             }
           }
+          brand {
+            slug
+            title
+            brandImage {
+              fluid(maxWidth: 700) {
+                ...GatsbyContentfulFluid
+              }
+            }
+          }
         }
       }
     }
   }
 `
-
 const product = props => {
+  const brandImage =
+    props.data.allContentfulProducts.edges[0].node.brand.brandImage.fluid
+
   return (
     <Layout>
       <main className="contenedor">
+        <Img fluid={brandImage} />
         <article>
           <section className="product-list">
             {props.data.allContentfulProducts.edges.map(edge => {

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Card from "../components/card"
 import Img from "gatsby-image"
-
+import "./product.css"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const query = graphql`
@@ -46,10 +46,10 @@ export const query = graphql`
 const product = props => {
   const brandImage =
     props.data.allContentfulProducts.edges[0].node.brand.brandImage.fluid
-
+    console.log(brandImage)
   return (
     <Layout>
-      <main className="contenedor">
+      <main className="contenedor pt">
         <Img fluid={brandImage} />
         <article>
           <section className="product-list">

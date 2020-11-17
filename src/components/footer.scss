@@ -1,0 +1,76 @@
+footer {
+    margin: 0 auto;
+      width: 95%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border: 1px;
+    border-color: #808080;
+    border-radius: 5px;
+  }
+  
+  .left {
+    align-items: center;
+    height: 120px;
+  }
+  
+  .left img {
+    width: 170px;
+    padding-left: 50px;
+  }
+  
+  .footer-company-name {
+    font-size: 10px;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .right {
+    padding-top: 12px;
+    text-align: center;
+  }
+  
+  .imagen-face {
+    border: 1px;
+    border-color: rgb(243, 237, 237);
+    border-radius: 10px;
+    border-style: solid;
+    width: 360px;
+  }
+  .right img {
+    width: 360px;
+  }
+  
+  .footer-links a {
+    font-size: 11px;
+    color: #808080;
+    padding: 0 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .left img {
+      width: 140px;
+      padding-left: 20px;
+    }
+  }  
+  
+  @media screen and (max-width: 420px) {
+    .left {
+      display: none;
+    }
+  
+    .center {
+      display: none;
+    }
+  
+    .right  {
+      padding-top: 10px;
+      text-align:center;
+    }
+    .imagen-face {
+      height: 100px;    
+    }
+  }

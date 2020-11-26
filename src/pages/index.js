@@ -1,12 +1,16 @@
 import React from "react"
-
+import Sliders from "../components/sliders"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
+    <main className="contenedor">
+        <article>
+          <Sliders></Sliders>
+        </article>
+      </main>
   </Layout>
 )
 

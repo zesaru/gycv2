@@ -33,7 +33,7 @@ export const query = graphql`
             slug
             title
             brandImage {
-              fluid(maxWidth: 700) {
+              fluid(maxWidth: 1300) {
                 ...GatsbyContentfulFluid
               }
             }

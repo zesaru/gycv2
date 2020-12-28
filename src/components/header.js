@@ -59,13 +59,17 @@ const Header = () => {
           <FontAwesomeIcon icon={faCaretDown} />
         </div>
 
-        <div className="contain-search">
+{/*         <div className="contain-search">
           <input type="search" name="" id="input-search" />
           <button type="submit" className="search-button">
             <i className="fa fa-search"></i>
           </button>
+        </div> */}
+        <div className="enlaces">
+          <Link to={`/`}>ESP</Link>
+          <Link to={`/jp/`}>JAP</Link>
+          <Link to={`/pt`}>PORT</Link>
         </div>
-
         <div className="enlaces">
           <Link to={`/`}>Inicio</Link>
           <Link to={`/empresa`}>Empresa</Link>

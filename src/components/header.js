@@ -9,6 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
+import Language from "./language"
+import Menu from "./menu"
+
 const Header = () => {
   const [state, setState] = useState(true)
 
@@ -59,23 +62,9 @@ const Header = () => {
           <FontAwesomeIcon icon={faCaretDown} />
         </div>
 
-{/*         <div className="contain-search">
-          <input type="search" name="" id="input-search" />
-          <button type="submit" className="search-button">
-            <i className="fa fa-search"></i>
-          </button>
-        </div> */}
-        <div className="enlaces">
-          <Link to={`/`}>ESP</Link>
-          <Link to={`/jp/`}>JAP</Link>
-          <Link to={`/pt`}>PORT</Link>
-        </div>
-        <div className="enlaces">
-          <Link to={`/`}>Inicio</Link>
-          <Link to={`/empresa`}>Empresa</Link>
-          <Link to={`/contacto`}>Contacto</Link>
-          <a href="#">Registrarse</a>
-        </div>
+        <Language />
+        <Menu />
+
       </div>
 
       <div className="contenedor contenedor-grid">
@@ -99,39 +88,6 @@ const Header = () => {
             })}
           </div>
 
-          <div className="contenedor-subcategorias">
-            <div className="subcategoria " data-categoria="provensal">
-              <div className="enlaces-subcategoria">
-                <button className="btn-regresar">
-                  <i className="fas fa-arrow-left"></i>Regresar
-                </button>
-                <h3 className="subtitulo">Provensal</h3>
-                <a href="#">Pastas</a>
-                <a href="#">Aceitunas</a>
-              </div>
-
-              <div className="banner-subcategoria">
-                <a href="#">
-                  <img src="./img/provenzal-1.jpg" alt="" />
-                </a>
-              </div>
-
-              <div className="galeria-subcategoria">
-                <a href="#">
-                  <img src="./img/provenzal-1.jpg" alt="" />
-                </a>
-                <a href="#">
-                  <img src="./img/provenzal-2.jpg" alt="" />
-                </a>
-                <a href="#">
-                  <img src="./img/provenzal-3.jpg" alt="" />
-                </a>
-                <a href="#">
-                  <img src="./img/provenzal-4.jpg" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>

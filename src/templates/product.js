@@ -58,6 +58,8 @@ const product = props => {
                 <Card
                   key={edge.node.id}
                   image={edge.node.imagethum.file.url + "?fm=webp"}
+                  bigimage={edge.node.productimage.file.url + "?fm=webp"}
+                  description={edge.node.description}
                   name={edge.node.name}
                   description={documentToReactComponents(
                     edge.node.description.json

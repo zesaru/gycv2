@@ -23,6 +23,9 @@ export const query = graphql`
             file {
               url
             }
+            fluid(maxWidth: 550) {
+              ...GatsbyContentfulFluid
+            }  
           }
           imagethum {
             file {
@@ -61,6 +64,7 @@ const product = props => {
                   bigimage={edge.node.productimage.file.url + "?fm=webp"}
                   description={edge.node.description}
                   name={edge.node.name}
+                  imagefluid={edge.node.productimage.fluid}
                   description={documentToReactComponents(
                     edge.node.description.json
                   )}

@@ -3,6 +3,7 @@ import "../components/card.css"
 import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog";
 import "@reach/dialog/styles.css";
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 
 const Card = props => {
@@ -13,8 +14,9 @@ const Card = props => {
   return (
     <div>
       <Dialog  isOpen={showDialog} onDismiss={close}>
+      <Img fluid={props.imagefluid} alt={props.name}/>
         <figure className="product-image">
-          <img src={props.bigimage} alt={props.name} />
+        
           <p>
            {props.description}
           </p>

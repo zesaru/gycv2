@@ -10,7 +10,8 @@ const IndexPage = () => (
         <article>
           <Sliders></Sliders>
         </article>
-      </main>
+        
+    </main>
   </Layout>
 )
 

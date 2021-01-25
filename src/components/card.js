@@ -28,12 +28,6 @@ const Card = props => {
           <img src={props.image} alt={props.name} />
         </figure>
         <span className="product-name">{props.name}</span>
-        <span className="product-overlay">
-          <p>
-            <span className="product-likes"></span>
-            <span className="product-comments"></span>
-          </p>
-        </span>
       </a>
     </div>
   )

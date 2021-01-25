@@ -1,0 +1,31 @@
+  .secundary-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .secundary-menu-container-item {
+    width: 33%;
+    transition: .2s;
+    overflow: hidden;
+    border: none !important;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    cursor: pointer;
+  }
+  
+  
+  .secundary-menu-container-item:hover {
+    position: relative;
+    z-index: 2;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+  }
+
+  @media screen and (max-width: 768px) {
+    .secundary-menu-container-item {
+
+      width: 49%;
+
+    }
+  }

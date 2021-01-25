@@ -1,10 +1,19 @@
 import React from "react"
-import "../components/card.css"
 import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog";
 import "@reach/dialog/styles.css";
 import styled from "styled-components"
+import "../components/card.css"
 import Img from "gatsby-image"
 
+const Button = styled.button`
+ @media screen and (max-width: 420px) {
+  padding: 11px 20px;
+  }  
+`
+
+const ButtonContainer = styled.div`
+  text-align:center;
+`
 
 const Card = props => {
   const [showDialog, setShowDialog] = React.useState(false);
@@ -12,7 +21,7 @@ const Card = props => {
   const close = () => setShowDialog(false);
 
   return (
-    <div>
+    <>
       <Dialog  isOpen={showDialog} onDismiss={close}>
       <Img fluid={props.imagefluid} alt={props.name}/>
         <figure className="product-image">
@@ -21,7 +30,9 @@ const Card = props => {
            {props.description}
           </p>
         </figure>
-        <button onClick={close}>Cerrar</button>
+        <ButtonContainer>
+          <Button onClick={close}>Cerrar</Button>
+        </ButtonContainer>
       </Dialog>
       <a onClick={open}  className="product">
         <figure className="product-image">
@@ -29,7 +40,7 @@ const Card = props => {
         </figure>
         <span className="product-name">{props.name}</span>
       </a>
-    </div>
+    </>
   )
 }
 

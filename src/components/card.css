@@ -20,7 +20,7 @@
 .product-image {
   margin: 0;
   text-align: center;
-  padding-bottom: 7px;
+  padding: 20px;
 }
 
 .product-image img {
@@ -28,8 +28,10 @@
 }
 
 .product-name {
-  padding: 3px;
+  padding: 10px;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .product-list {
@@ -43,6 +45,13 @@
   .product-list {
     grid-gap: 10px;
     grid-template-columns: repeat(2, minmax(100px, 180px));
+  }
 
+  [data-reach-dialog-content] {
+    width: 75vw;
+    margin: 8vh auto;
+    background: white;
+    padding: 1rem;
+    outline: none;
   }
 }

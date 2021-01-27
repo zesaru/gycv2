@@ -31,7 +31,13 @@
   padding: 10px;
 }
 
-
+[data-reach-dialog-content] {
+  width: 40vw;
+  margin: 8vh auto;
+  background: white;
+  padding: 1rem;
+  outline: none;
+}
 
 @media screen and (max-width: 768px) {
   .product-list {

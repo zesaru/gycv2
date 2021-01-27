@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./header.css"
+import "../../../components/header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faBars,
@@ -9,9 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import Language from "./language"
-import Flagmenu from "./flagmenu"
-import Menu from "./menu"
+import Language from "../../../components/language"
+import Flagmenu from "../../../components/flagmenu"
+import Menu from "../../../components/menu"
 
 const Header = () => {
   const [state, setState] = useState(true)
@@ -80,7 +80,7 @@ const Header = () => {
               return (
                 <Link
                   key={edge.node.id}
-                  to={`/productos/${edge.node.slug}`}
+                  to={`jp/productos/${edge.node.slug}`}
                   data-categoria={edge.node.slug}
                 >
                   {edge.node.title}

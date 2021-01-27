@@ -26,7 +26,6 @@ export const Smallbanners = () => {
           return (
               
                 <div className="secundary-menu-container-item" key={node.id}>
-
                   
                   <Image fluid={node.image.fluid} alt={node.name} />
 

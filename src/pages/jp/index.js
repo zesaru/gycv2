@@ -1,17 +1,17 @@
 import React from "react"
-import Sliders from "../../components/sliders"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Sliders from "./components/sliders"
+import Layout from "./components/layout"
 
 const IndexPage = () => (
+
   <Layout>
-    <SEO title="Home" />
     <main className="contenedor">
         <article>
           <Sliders></Sliders>
         </article>
-      </main>
+    </main>
   </Layout>
+
 )
 
 export default IndexPage

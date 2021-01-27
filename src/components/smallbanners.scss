@@ -5,7 +5,7 @@
   }
   
   .secundary-menu-container-item {
-    width: 33%;
+    width: 50%;
     transition: .2s;
     overflow: hidden;
     border: none !important;
@@ -22,10 +22,4 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
   }
 
-  @media screen and (max-width: 768px) {
-    .secundary-menu-container-item {
 
-      width: 49%;
-
-    }
-  }

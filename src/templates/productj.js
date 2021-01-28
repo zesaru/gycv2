@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../pages/jp/components/layout"
 import Card from "../components/card"
 import Img from "gatsby-image"
 import "./product.css"
@@ -16,13 +16,16 @@ export const query = graphql`
           brand {
             slug
           }
-          description {
+          jdescription {
             json
           }
           productimage {
             file {
               url
             }
+            fluid(maxWidth: 550) {
+              ...GatsbyContentfulFluid
+            }  
           }
           imagethum {
             file {
@@ -46,7 +49,6 @@ export const query = graphql`
 const product = props => {
   const brandImage =
     props.data.allContentfulProducts.edges[0].node.brand.brandImage.fluid
-    console.log(brandImage)
   return (
     <Layout>
       <main className="contenedor pt">
@@ -59,8 +61,9 @@ const product = props => {
                   key={edge.node.id}
                   image={edge.node.imagethum.file.url + "?fm=webp"}
                   name={edge.node.jname}
+                  imagefluid={edge.node.productimage.fluid}
                   description={documentToReactComponents(
-                    edge.node.description.json
+                    edge.node.jdescription.json
                   )}
                 ></Card>
               )

@@ -1,6 +1,7 @@
 import React from "react"
 import Sliders from "./components/sliders"
 import Layout from "./components/layout"
+import { Smallbanners } from "../../components/smallbanners"
 
 const IndexPage = () => (
 
@@ -9,6 +10,7 @@ const IndexPage = () => (
         <article>
           <Sliders></Sliders>
         </article>
+      <Smallbanners/>
     </main>
   </Layout>
 

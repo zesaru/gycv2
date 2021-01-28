@@ -11,7 +11,21 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Language from "../../../components/language"
 import Flagmenu from "../../../components/flagmenu"
-import Menu from "../../../components/menu"
+import Menu from "./menu"
+
+
+
+import styled from "styled-components"
+const Subtitle = styled.span`
+  font-size:0.8rem;
+  color: #0054a7;
+  display:block;
+  text-align:left;
+`
+
+const ContainerMenuItem = styled.span`
+  text-align:left;
+`
 
 const Header = () => {
   const [state, setState] = useState(true)
@@ -29,7 +43,8 @@ const Header = () => {
         edges {
           node {
             id
-            title
+            jtitle
+            jdescription
             slug
           }
         }
@@ -80,10 +95,10 @@ const Header = () => {
               return (
                 <Link
                   key={edge.node.id}
-                  to={`jp/productos/${edge.node.slug}`}
+                  to={`productos/${edge.node.slug}`}
                   data-categoria={edge.node.slug}
                 >
-                  {edge.node.title}
+                  <ContainerMenuItem>{edge.node.jtitle} <Subtitle>{edge.node.jdescription}</Subtitle></ContainerMenuItem>
                   <FontAwesomeIcon icon={faAngleRight} />
                 </Link>
               )

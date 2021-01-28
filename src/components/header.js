@@ -16,12 +16,14 @@ import Menu from "./menu"
 
 import styled from "styled-components"
 const Subtitle = styled.span`
-  font-size:12px;
-  margin:0;
-  padding:0;
-  color: red;
-  border: 1px solid red;
+  font-size:0.8rem;
+  color: #0054a7;
+  display:block;
+  text-align:left;
+`
 
+const ContainerMenuItem = styled.span`
+  text-align:left;
 `
 const Header = () => {
   const [state, setState] = useState(true)
@@ -94,7 +96,7 @@ const Header = () => {
                   to={`/productos/${edge.node.slug}`}
                   data-categoria={edge.node.slug}
                 >
-                  <span>{edge.node.title} <Subtitle>{edge.node.descrption}</Subtitle></span>
+                  <ContainerMenuItem>{edge.node.title} <Subtitle>{edge.node.descrption}</Subtitle></ContainerMenuItem>
                   <FontAwesomeIcon icon={faAngleRight} />
                 </Link>
               )

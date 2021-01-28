@@ -13,6 +13,16 @@ import Language from "./language"
 import Flagmenu from "./flagmenu"
 import Menu from "./menu"
 
+
+import styled from "styled-components"
+const Subtitle = styled.span`
+  font-size:12px;
+  margin:0;
+  padding:0;
+  color: red;
+  border: 1px solid red;
+
+`
 const Header = () => {
   const [state, setState] = useState(true)
 
@@ -31,6 +41,7 @@ const Header = () => {
             id
             title
             slug
+            descrption
           }
         }
       }
@@ -83,7 +94,7 @@ const Header = () => {
                   to={`/productos/${edge.node.slug}`}
                   data-categoria={edge.node.slug}
                 >
-                  {edge.node.title}
+                  <span>{edge.node.title} <Subtitle>{edge.node.descrption}</Subtitle></span>
                   <FontAwesomeIcon icon={faAngleRight} />
                 </Link>
               )

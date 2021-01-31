@@ -62,9 +62,7 @@ const product = props => {
                   image={edge.node.imagethum.file.url + "?fm=webp"}
                   name={edge.node.jname}
                   imagefluid={edge.node.productimage.fluid}
-                  description={documentToReactComponents(
-                    edge.node.jdescription.json
-                  )}
+                  description={ edge.node.jdescription ==! null && documentToReactComponents(edge.node.jdescription.json) }
                 ></Card>
               )
             })}

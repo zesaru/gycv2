@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../pages/jp/components/layout"
+import Layout from "../../src/components/layoutj"
 import Card from "../components/card"
 import Img from "gatsby-image"
 import "./product.css"
@@ -62,7 +62,7 @@ const product = props => {
                   image={edge.node.imagethum.file.url + "?fm=webp"}
                   name={edge.node.jname}
                   imagefluid={edge.node.productimage.fluid}
-                  description={ edge.node.jdescription ==! null && documentToReactComponents(edge.node.jdescription.json) }
+                  description={ edge.node.jdescription !== null && documentToReactComponents(edge.node.jdescription.json) }
                 ></Card>
               )
             })}

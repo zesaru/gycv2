@@ -1,6 +1,6 @@
 import React from "react"
-import Header from "./header"
-import Footer from "./footer"
+import Header from "../pages/jp/components/header"
+import Footer from "../pages/jp/components/footer"
 
 const Layout = props => {
 

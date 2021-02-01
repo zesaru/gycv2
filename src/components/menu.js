@@ -7,8 +7,9 @@ const menu = () => {
           <Link to={`/`}>Inicio</Link>
           <Link to={`/empresa`}>Empresa</Link>
           <Link to={`/contacto`}>Contacto</Link>
-          <a href="#">Registrarse</a>
-        </div>
+          <Link to='/registro'>
+            Registrarse
+          </Link>        </div>
     )
 }
 

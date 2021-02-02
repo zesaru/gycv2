@@ -1,5 +1,5 @@
 import React, { useState} from "react"
-import "../../../components/header.css"
+import "./header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faBars,
@@ -100,14 +100,15 @@ const Header = () => {
             data.allContentfulBrands.edges.map(edge => {
               
               return (
-                <Link
-                  key={edge.node.id}
-                  to={`productos/${edge.node.slug}`}
+                <a
+                  href={window.location.pathname.includes("/jp/productos") ? edge.node.slug : "productos/"+edge.node.slug}
                   data-categoria={edge.node.slug}
                 >
+                {//window.location.pathname.includes("productos") ? "SI" : "No"
+                }
                   <ContainerMenuItem>{edge.node.jtitle} <Subtitle>{edge.node.jdescription}</Subtitle></ContainerMenuItem>
                   <FontAwesomeIcon icon={faAngleRight} />
-                </Link>
+                </a>
               )
             })
 

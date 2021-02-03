@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import {Link} from "gatsby"
+
 const menuj = () => {
     return (
         <div className="enlaces">
@@ -9,7 +10,6 @@ const menuj = () => {
           <Link to={`/jp/registro`}>登録</Link>
        </div>
     )
-     
 }
 
 export default menuj

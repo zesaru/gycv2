@@ -77,7 +77,7 @@ const Header = () => {
           id="btn-departamentos"
         >
           <p>
-            Todos los <span>Productos</span>
+          商品一覧
           </p>
           <FontAwesomeIcon icon={faCaretDown} />
         </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import Sliders from "../../components/sliders"
+import Sliders from "./components/slider"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 

@@ -11,7 +11,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Language from "./language"
 import Flagmenu from "./flagmenu"
-import Menu from "./menu"
+import Menu from "./menuj"
 
 
 
@@ -100,15 +100,15 @@ const Header = () => {
             data.allContentfulBrands.edges.map(edge => {
               
               return (
-                <a
-                  href={window.location.pathname.includes("/jp/productos") ? edge.node.slug : "productos/"+edge.node.slug}
+                <Link
+                  key={edge.node.id}
+                  to={`/jp/productos/${edge.node.slug}`}
                   data-categoria={edge.node.slug}
                 >
-                {//window.location.pathname.includes("productos") ? "SI" : "No"
-                }
                   <ContainerMenuItem>{edge.node.jtitle} <Subtitle>{edge.node.jdescription}</Subtitle></ContainerMenuItem>
                   <FontAwesomeIcon icon={faAngleRight} />
-                </a>
+                </Link>
+
               )
             })
 

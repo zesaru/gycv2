@@ -1,5 +1,5 @@
 import React from "react"
-import Sliders from "../../components/sliders"
+import Sliders from "./components/sliders"
 import Layout from "../../components/layoutj"
 import { Smallbanners } from "../../components/smallbanners"
 

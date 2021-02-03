@@ -19,8 +19,8 @@ const Sliders = () => {
         edges {
           node {
             id,
-            name,
-            image {
+            jname,
+            jimage {
               file {
                 url
               }
@@ -34,9 +34,9 @@ const Sliders = () => {
     <Slider autoplay duration={4000} className="slider-wrapper">
       {data.allContentfulBanners.edges.map((edge) => {
         return (
-          <div key={edge.node.id} className="slider-content" style={{ background: `url('${edge.node.image.file.url}') no-repeat center center` }} >
+          <div key={edge.node.id} className="slider-content" style={{ background: `url('${edge.node.jimage.file.url}') no-repeat center center` }} >
             <section>
-              <img src={logo} alt={edge.node.name} />
+              <img src={logo} alt={edge.node.jname} />
             </section>
           </div>
         )

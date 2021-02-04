@@ -22,19 +22,19 @@ const Footer = () => {
           <img src={facebook} />
         </div>
         <p className="footer-links">
-          <Link to='/'>
-            Inicio
+          <Link to='/jp/'>
+            ホーム
           </Link>
           |
-          <Link to='/empresa'>
-            Empresa
+          <Link to='/jp/empresa'>
+            会社概要
           </Link>          |
-          <Link to='/contacto'>
-            Contacto
+          <Link to='/jp/contacto'>
+            お問い合わせ
           </Link>
           |
-          <Link to='/registro'>
-            Registrarse
+          <Link to='/jp/registro'>
+          登録
           </Link>
         </p>
         {/* <p className="footer-company-name">© {new Date().getFullYear()}</p> */}

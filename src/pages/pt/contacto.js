@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../components/layout';
-import './contacto.scss';
-import contactopng from '../static/img/contacto.png';
+import Layout from '../../components/layout';
+import '../../pages/contacto.scss';
+import contactopng from '../../static/img/contacto.png';
 
 const contacto = () => {
   return (

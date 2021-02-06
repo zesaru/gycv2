@@ -1,5 +1,5 @@
 import React from "react"
-import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog";
+import { Dialog } from "@reach/dialog";
 import "@reach/dialog/styles.css";
 import styled from "styled-components"
 import "../components/card.css"
@@ -33,9 +33,9 @@ const Card = props => {
           <Button onClick={close}>Cerrar</Button>
         </ButtonContainer>
       </Dialog>
-      <a onClick={open}  className="product">
+      <a href="#section" onClick={open} className="product">
         <figure className="product-image">
-        <Img fluid={props.image} alt={props.name}/>
+          <Img fluid={props.image} alt={props.name}/>
         </figure>
         <span className="product-name">{props.name}</span>
       </a>

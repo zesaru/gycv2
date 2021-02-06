@@ -20,17 +20,14 @@ export const query = graphql`
             json
           }
           productimage {
-            file {
-              url
-            }
             fluid(maxWidth: 550) {
               ...GatsbyContentfulFluid
             }  
           }
           imagethum {
-            file {
-              url
-            }
+            fluid(maxWidth: 110) {
+              ...GatsbyContentfulFluid
+            } 
           }
           brand {
             slug
@@ -59,8 +56,7 @@ const product = props => {
               return (
                 <Card
                   key={edge.node.id}
-                  image={edge.node.imagethum.file.url + "?fm=webp"}
-                  bigimage={edge.node.productimage.file.url + "?fm=webp"}
+                  image={edge.node.imagethum.fluid}
                   name={edge.node.name}
                   imagefluid={edge.node.productimage.fluid}
                   description={documentToReactComponents(

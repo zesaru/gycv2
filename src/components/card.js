@@ -24,8 +24,7 @@ const Card = props => {
     <>
       <Dialog  isOpen={showDialog} onDismiss={close}>
       <Img fluid={props.imagefluid} alt={props.name}/>
-        <figure className="product-image">
-        
+        <figure className="product-image">   
           <p>
            {props.description}
           </p>
@@ -36,7 +35,7 @@ const Card = props => {
       </Dialog>
       <a onClick={open}  className="product">
         <figure className="product-image">
-          <img src={props.image} alt={props.name} />
+        <Img fluid={props.image} alt={props.name}/>
         </figure>
         <span className="product-name">{props.name}</span>
       </a>

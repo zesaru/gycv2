@@ -8,7 +8,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const query = graphql`
   query($slug: String!) {
-    allContentfulProducts(filter: { brand: { slug: { eq: $slug } } }) {
+    allContentfulProducts(
+      filter: { brand: { slug: { eq: $slug } } }
+      sort: {fields: name}) {
       edges {
         node {
           id
@@ -20,12 +22,12 @@ export const query = graphql`
             json
           }
           productimage {
-            fluid(maxWidth: 550) {
+            fluid(maxWidth: 550, quality: 80) {
               ...GatsbyContentfulFluid
             }  
           }
           imagethum {
-            fluid(maxWidth: 110) {
+            fluid(maxWidth: 120, quality: 100) {
               ...GatsbyContentfulFluid
             } 
           }

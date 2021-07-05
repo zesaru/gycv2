@@ -1,56 +1,81 @@
 import React from 'react';
 import Layout from '../components/layout';
 import './empresa.scss';
-import empresajpg from '../static/img/empresa.jpg'
+import styled from "styled-components"
 
-const empresa = () => {
+const Content = styled.article`
+  text-align:left
+`
+
+const sevebuenazo = () => {
   return (
     <Layout >
       <main className="contenedor">
-        <article>
+        <Content>
 
-          <img className='imagenempresa' src={empresajpg} alt="gyccorp" />
-          <h3>G&amp;C CORPORATION</h3><br /><br />
-          <h4>Perfil de la empresa</h4>
-          <p>Somos una empresa dedicada al ramo de  Importación, distribución, operaciones logísticas y proyectos de inversión, dentro del archipiélago japonés.</p>
-          <p>El accionar de la empresa que cuenta con el respaldo de marcas y empresas de prestigio en el mercado peruano local e internacional, demuestra la importancia de la introducción de los productos peruanos en el mercado asiático.</p>
-          <p>Los proveedores y las empresas con las que mantenemos estrecha relación y vínculos comerciales son:</p><br />
-          <ul>
-            <li>   CORPORACIÓN LINDLEY S.A. </li>
-            <li>   GLORIA S.A. </li>
-            <li>   DESHIDRATADORA DE ALIMENTOS NATURALES S.R.L.</li>
-            <li>   KIKKO CORPORATION S.A. </li>
-            <li>   CV EXIMP S.A.C. </li>
-            <li>   DESTILERIAS UNIDAS S.A.C. </li>
-            <li>   PRODUCTOS EXTRAGEL Y UNIVERSAL S.A.C.  (PEUSAC) </li>
-            <li>   BODEGAS Y VIÑEDOS TABERNERO S.A.C. </li>
-            <li>   UNIÓN DE CERVECERÍAS PERUANAS BACKUS Y JOHNSTON S.A.A. </li>
-            <li>   ARCA CONTINENTAL </li>
-            <li>   THE GREEN FARMER S.A.C </li>
-            <li>   BONALI S.A </li>
-            <li>   QUECHUA FOODS </li>
-            <li>   PERUVIAN NATURE </li>
-            <li>   FRUTEX S.A </li>
-            <li>   AGROINDUSTRAS EMIC </li>
-            <li>   NOBEX S.A </li>
-          </ul>
-          <br />
 
-          <h4>Misión</h4>
-          <p>Introducir al mercado japonés productos latinoamericanos con los mayores y mejores niveles de calidad y presentación a un precio competitivo; mostrar dentro del mercado japonés el alto nivel nutritivo de los productos latinoamericanos en general y peruanos en particular; darle un valor agregado a los productos que importamos convirtiéndolos no solo en bienes de consumo sino en una muestra de la cultura y tradiciones latinoamericanas; brindar el mejor servicio tanto a nuestros clientes como al consumidor final de nuestros productos.</p>
-          <br />
-          <h4>Visión:</h4>
-          <p>Consolidarnos como un puente comercial y de negocios entre Latinoamérica y Japón, pero también entre Japón y Sudamérica ya que existe una gran variedad de productos japoneses que resultarían sumamente rentables e innovadores dentro del mercado latinoamericano. A la vez, estamos en camino de establecer un modelo comercial, de negocios e inversión que incorpore y aproveche los mejores aspectos de ambos mercados con la finalidad de facilitar el flujo de productos e información, minimice los costos y mantenga o aumente la calidad de los productos con los que trabajamos.</p>
-          <br />
-          <h4>Valores:</h4>
-          <p>El trabajo de G&C Corporation tiene como pilares fundamentales la ética en todos los niveles de la empresa y en las relaciones que establecemos con el exterior; la lealtad a nuestros inversionistas, socios, clientes y distribuidores; la eficiencia y el respeto en todas las acciones que desarrollamos; y el respeto y cuidado del medio ambiente como premisas fundamentales a la hora de seleccionar los productos con los que trabajamos.</p>
-          <br />
-          <h4>Responsabilidad Social:</h4>
-          <p>Asimismo y por sentirnos orgullosos de nuestra herencia cultural, apoyamos y patrocinamos todo tipo de actividades y eventos que preserven, impulsen y difundan nuestra cultura y tradiciones, o que contribuyan al acercamiento de nuestros pueblos.</p>
-        </article>
+          <h4>REGLAMENTO DEL CONCURSO</h4>
+          <br/>
+          <h5>Del concurso:</h5>
+          <br/>
+          <p>1. La finalidad de este concurso es la de incentivar la preparación de un potaje o
+          platillo, de cualquier país, utilizando como insumo alguno (o varios) de los productos
+          de nuestras marcas corporativas: Peru Chef-f, Caprichosa, Framidia y Doña Meche.
+          <br/>2. El tema de preparación es libre, entendiendo que se valorará la originalidad,
+          vistosidad y decoración de la imagen a recibir.
+          <br/>3. Serán 3 los ganadores de canastas con productos de G&C Corporation.
+          <br/>4. Los menores de edad pueden participar en el concurso bajo responsabilidad total
+          de sus padres y/o tutores.
+          <br/>5. Se recibirá una imagen (foto digital) por participante hasta el domingo 25 de julio
+          vía correo electrónico .
+          <br/>6. El resultado del concurso se conocerá el día 30 de julio del presente año y se
+          publicará en los diversos medios de la colectividad, así como en la página web de
+          G&C Corporation y Facebook institucional.
+          <br/>7. El correo electrónico habilitado para el concurso es sevebuenazo@gyc-corp.com
+          </p>
+          <br/>
+          <h5>Del Participante:</h5>
+          <br/>
+          <p>1. Deberá enviar un correo electrónico adjuntando una imagen o foto digital (tomada
+          de un celular o de una cámara digital).
+          <br/>2. Deberá aparecer dentro de la foto enviada, el producto (o los productos) que
+          fueron utilizados en la preparación.
+          <br/> 3. Consignará dentro del correo electrónico los siguientes datos:
+          <br/>a) Reseña del plato
+          <br/>b) Nombre completo y/o seudónimo.
+          <br/>c) Dirección (incluyendo su código postal)
+          <br/>d) Numero de teléfono de contacto
+          <br/>e) Nacionalidad.
+          <br/>f) Fecha de nacimiento.
+          <br/>4. En caso se utilice un mismo correo electrónico para enviar varias imágenes de
+          varios participantes (dentro de una misma familia), los correos deberán ser enviados
+          de manera individual (un correo/un participante) y consignar debidamente todos los
+          datos solicitados.
+          <br/>5. Deberán residir en Japón.
+          <br/>6. Los datos y las imágenes serán de uso exclusivo e interno de la sevebuenazo.
+          </p>
+          <br/>
+          <h5>Del Ganador:</h5>
+          <p>
+          <br/>1. Autoriza a G&C Corporation la publicación de sus datos a fin de dar a conocer los
+          resultados del concurso.
+          <br/>2. Las fotos de los 3 ganadores serán publicadas en el almanaque corporativo del
+          2022, que será distribuido en diciembre del presente año, con las reseñas del
+          concurso.
+          <br/>3. Los 3 premios serán enviados directamente a la dirección ganadora, previa
+          comunicación telefónica y/o por correo electrónico.
+          <br/>4. Recibirán sus respectivos premios en las direcciones postales que señalaron en
+          los correos electrónicos.
+          <br/>5. Cualquier cambio del punto anterior, los gastos serán asumidos por el ganador.
+          <br/>6. La renuncia al premio no dará ningún derecho de indemnización, remuneración
+          y/o compensación económica.
+          <br/>7. De no poder establecer comunicación con alguno de los ganadores en un máximo
+          de 1 semana, el premio será sorteado entre los participantes.<br/>
+          </p>
+        </Content>
       </main>
     </Layout>
   );
 }
 
-export default empresa;
+export default sevebuenazo;

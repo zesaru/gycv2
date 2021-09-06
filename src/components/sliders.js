@@ -63,11 +63,11 @@ const Sliders = () => {
             <section>
               <img src={logo} alt={edge.node.name} />
             </section>
-            <Inner>
+            {/* <Inner>
               <LinkSeeMore to="/sevebuenazo">
                 Reglamento
               </LinkSeeMore>
-            </Inner> 
+            </Inner>  */}
           </div>
         )
       })

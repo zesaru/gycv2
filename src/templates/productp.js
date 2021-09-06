@@ -48,7 +48,6 @@ export const query = graphql`
 const product = props => {
   const brandImage =
     props.data.allContentfulProducts.edges[0].node.brand.brandImage.fluid
-    console.log(brandImage)
   return (
     <Layout>
       <main className="contenedor pt">

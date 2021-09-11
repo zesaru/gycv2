@@ -14,7 +14,8 @@ export const Smallbanners = () => {
               ...GatsbyContentfulFluid_withWebp
             }
           }
-          name
+          name,
+          url
         }
         totalCount
       }
@@ -25,7 +26,10 @@ export const Smallbanners = () => {
         {data.allContentfulSmallbanners.nodes.map(node => {
           return ( 
                 <div className="secundary-menu-container-item" key={node.id}>
-                  <Image fluid={node.image.fluid} alt={node.name} />
+                  
+                  <Link to={`/productos/${node.url}`}>
+                    <Image fluid={node.image.fluid} alt={node.name} />
+                  </Link>
                 </div>
           )
         })}           

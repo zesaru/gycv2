@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layoutp';
-import '../../pages/empresa.scss';
+import '../../pages/empresa.css';
 import styled from "styled-components"
 
 const Content = styled.article`

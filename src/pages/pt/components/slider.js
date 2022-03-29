@@ -3,7 +3,7 @@ import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
-import './sliders.scss';
+import './sliders.css';
 import styled from "styled-components"
 
 

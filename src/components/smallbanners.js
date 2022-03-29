@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
-import "./smallbanners.scss"
+import "./smallbanners.css"
 
 export const Smallbanners = () => {
     const data = useStaticQuery(graphql`
@@ -26,10 +26,10 @@ export const Smallbanners = () => {
         {data.allContentfulSmallbanners.nodes.map(node => {
           return ( 
                 <div className="secundary-menu-container-item" key={node.id}>
-                  
-                  <Link to={`/productos/${node.url}`}>
-                    <Image fluid={node.image.fluid} alt={node.name} />
-                  </Link>
+                  { node.url === 'ganadores-sorteo-2021' 
+                  ? <Link to={`${node.url}`}><Image fluid={node.image.fluid} alt={node.name} /></Link> 
+                  : <Link to={`/productos/${node.url}`}><Image fluid={node.image.fluid} alt={node.name} /></Link>
+                  }
                 </div>
           )
         })}           

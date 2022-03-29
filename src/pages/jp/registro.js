@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from "../../components/layoutj"
-import '../../pages/registro.scss';
+import '../../pages/registro.css';
 
 const registro = () => {
   return (

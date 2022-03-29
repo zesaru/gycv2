@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.scss';
+import './footer.css';
 import { Link } from 'gatsby';
 import facebook from '../static/img/facebook.png'
 import Image from "gatsby-image"
@@ -19,7 +19,7 @@ const Footer = () => {
 
       <div className="right">
         <div className="imagen-face">
-          <img src={facebook} />
+          <img src={facebook} alt={facebook} />
         </div>
         <p className="footer-links">
           <Link to='/jp/'>

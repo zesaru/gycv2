@@ -20,9 +20,6 @@ const Title = styled.h4`
 const Subtitle = styled.span`
   font-weight: bolder;
 `
-const Indented = styled.span`
-  padding-left: 10px;
-`
 const navidad = () => {
   return (
     <Layout>

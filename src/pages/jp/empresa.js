@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layoutj';
-import '../../pages/empresa.scss';
+import '../../pages/empresa.css';
 import empresajpg from '../../static/img/empresa.jpg'
 
 const empresa = () => {

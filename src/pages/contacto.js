@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import './contacto.scss';
+import './contacto.css';
 import contactopng from '../static/img/contacto.png';
 
 const contacto = () => {

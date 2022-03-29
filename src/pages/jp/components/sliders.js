@@ -3,7 +3,7 @@ import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
-import './sliders.scss';
+import './sliders.css';
 import styled from "styled-components"
 
 const logo = 'https://images.ctfassets.net/uf4sk9fqckkz/2HdqAVJ8Maj42qt1PbFYze/9207cc73ee0d4a3c00344452fc796a7e/logo5.png';

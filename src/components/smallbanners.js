@@ -26,7 +26,7 @@ export const Smallbanners = () => {
         {data.allContentfulSmallbanners.nodes.map(node => {
           return ( 
                 <div className="secundary-menu-container-item" key={node.id}>
-                  { node.url === 'ganadores-sorteo-2021' 
+                  { node.url === 'ganadores-sorteo-2021' || node.url ==='sevebuenazo-mayo-2022' 
                   ? <Link to={`${node.url}`}><Image fluid={node.image.fluid} alt={node.name} /></Link> 
                   : <Link to={`/productos/${node.url}`}><Image fluid={node.image.fluid} alt={node.name} /></Link>
                   }

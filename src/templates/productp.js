@@ -1,16 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../../src/components/layoutp"
 import Card from "../components/card"
-import Img from "gatsby-image"
 import "./product.css"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 export const query = graphql`
   query($slug: String!) {
     allContentfulProducts(
       filter: { brand: { slug: { eq: $slug } } }
-      sort: {fields: name})  {
+      sort: { fields: name }
+    ) {
       edges {
         node {
           id
@@ -19,25 +20,34 @@ export const query = graphql`
             slug
           }
           pdrescription {
-            json
+            raw
           }
           productimage {
-            fluid(maxWidth: 550) {
-              ...GatsbyContentfulFluid
-            }  
+            gatsbyImageData(
+              width: 550
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              quality: 80
+            )
           }
           imagethum {
-            fluid(maxWidth: 110) {
-              ...GatsbyContentfulFluid
-            } 
+            gatsbyImageData(
+              width: 120
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              quality: 100
+            )
           }
           brand {
             slug
             title
             brandImage {
-              fluid(maxWidth: 1300) {
-                ...GatsbyContentfulFluid
-              }
+              gatsbyImageData(
+                width: 1300
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+                quality: 100
+              )
             }
           }
         }
@@ -51,7 +61,7 @@ const product = props => {
   return (
     <Layout>
       <main className="contenedor pt">
-        <Img fluid={brandImage} />
+        <GatsbyImage image={brandImage.gatsbyImageData} />
         <article>
           <section className="product-list">
             {props.data.allContentfulProducts.edges.map(edge => {
@@ -61,7 +71,11 @@ const product = props => {
                   image={edge.node.imagethum.fluid}
                   name={edge.node.pname}
                   imagefluid={edge.node.productimage.fluid}
-                  description={ edge.node.pdrescription !== null && documentToReactComponents(edge.node.pdrescription.json) }
+                  description={edge.node.pdrescription.map((page, index) => {
+                    if (page.content) {
+                      renderRichText(page.content)
+                    }
+                  })}
                 ></Card>
               )
             })}

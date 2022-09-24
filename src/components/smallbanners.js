@@ -1,6 +1,6 @@
 import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from "gatsby-image"
 import "./smallbanners.css"
 
 export const Smallbanners = () => {
@@ -10,9 +10,11 @@ export const Smallbanners = () => {
         nodes {
           image {
             id
-            fluid(quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              quality: 100
+            )
           }
           name
           url
@@ -29,11 +31,11 @@ export const Smallbanners = () => {
             {node.url === "ganadores-sevebuenazo2022" ||
             node.url === "se_bebe_buenazo_2022" ? (
               <Link to={`${node.url}`}>
-                <Image fluid={node.image.fluid} alt={node.name} />
+                <GatsbyImage image={node.image.gatsbyImageData} />
               </Link>
             ) : (
               <Link to={`/productos/${node.url}`}>
-                <Image fluid={node.image.fluid} alt={node.name} />
+                <Image image={node.image.gatsbyImageData} alt={node.name} />
               </Link>
             )}
           </div>

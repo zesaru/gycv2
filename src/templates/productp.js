@@ -57,7 +57,7 @@ export const query = graphql`
 `
 const product = props => {
   const brandImage =
-    props.data.allContentfulProducts.edges[0].node.brand.brandImage.fluid
+    props.data.allContentfulProducts.edges[0].node.brand.brandImage
   return (
     <Layout>
       <main className="contenedor pt">
@@ -68,14 +68,10 @@ const product = props => {
               return (
                 <Card
                   key={edge.node.id}
-                  image={edge.node.imagethum.fluid}
+                  image={edge.node.imagethum.gatsbyImageData}
                   name={edge.node.pname}
-                  imagefluid={edge.node.productimage.fluid}
-                  description={edge.node.pdrescription.map((page, index) => {
-                    if (page.content) {
-                      renderRichText(page.content)
-                    }
-                  })}
+                  imagefluid={edge.node.productimage.gatsbyImageData}
+                  description={renderRichText(edge.node.pdrescription)}
                 ></Card>
               )
             })}

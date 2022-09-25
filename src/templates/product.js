@@ -72,7 +72,7 @@ const product = props => {
                   name={edge.node.name}
                   imagefluid={edge.node.productimage.gatsbyImageData}
                   description={renderRichText(edge.node.description)}
-                ></Card>
+                />
               )
             })}
           </section>

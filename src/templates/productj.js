@@ -68,13 +68,10 @@ const product = props => {
               return (
                 <Card
                   key={edge.node.id}
-                  image={edge.node.imagethum.fluid}
+                  image={edge.node.imagethum.gatsbyImageData}
                   name={edge.node.jname}
-                  imagefluid={edge.node.productimage.fluid}
-                  description={
-                    edge.node.jdescription !== null &&
-                    renderRichText(edge.node.jdescription.raw)
-                  }
+                  imagefluid={edge.node.productimage.gatsbyImageData}
+                  description={renderRichText(edge.node.jdescription)}
                 ></Card>
               )
             })}

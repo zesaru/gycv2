@@ -71,7 +71,7 @@ const product = props => {
                   image={edge.node.imagethum.gatsbyImageData}
                   name={edge.node.pname}
                   imagefluid={edge.node.productimage.gatsbyImageData}
-                  description={renderRichText(edge.node.pdrescription)}
+                  description={ edge.node.pdrescription !== null && renderRichText(edge.node.pdrescription)}
                 ></Card>
               )
             })}

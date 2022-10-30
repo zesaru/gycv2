@@ -13,17 +13,7 @@ const Img = styled.img`
   padding: 15px;
   width: 60%;
 `
-const Tag = styled.span`
-  position: fixed;
-  left: 30px;
-  background-color: #004899;
-  color: white;
-  border-radius: 50px;
-  font-size: 12px;
-  margin: 10px;
-  padding: 3px 10px;
-  text-transform: uppercase;
-`
+
 const Label = styled.h4`
   margin: 4px 0;
   font-size: 12px;
@@ -38,7 +28,6 @@ const Container = styled.div`
   align-content: center;
   @media only screen and (max-width: 1024px) {
     grid-template-columns: repeat(5, 1fr);
-
   }
 `
 

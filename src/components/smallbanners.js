@@ -29,7 +29,8 @@ export const Smallbanners = () => {
         return (
           <div className="secundary-menu-container-item" key={node.id}>
             {node.url === "ganadores-sevebuenazo2022" ||
-            node.url === "se_bebe_buenazo_2022" ? (
+            node.url === "se_bebe_buenazo_2022" ||
+            node.url === "navidad" ? (
               <Link to={`${node.url}`}>
                 <GatsbyImage image={node.image.gatsbyImageData} />
               </Link>

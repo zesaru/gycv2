@@ -7,7 +7,7 @@ import "./product.css"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     allContentfulProducts(
       filter: { brand: { slug: { eq: $slug } } }
       sort: { fields: name }

@@ -28,7 +28,7 @@ export const Smallbanners = () => {
       {data.allContentfulSmallbanners.nodes.map(node => {
         return (
           <div className="secundary-menu-container-item" key={node.id}>
-            {node.url === "ganadoresdelsorteo2023" ? (
+            {node.url === "navidad" ? (
               <Link to={`${node.url}`}>
                 <GatsbyImage image={node.image.gatsbyImageData} />
               </Link>

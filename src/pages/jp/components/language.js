@@ -6,7 +6,7 @@ const language = () => {
         <div className="enlaces">
           <Link to={`/`}>ESP</Link>
           <Link to={`/jp/`}>JAP</Link>
-          <Link to={`/pt`}>PORT</Link>
+          <Link to={`/pt`}>POR</Link>
         </div>
     )
 }

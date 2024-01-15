@@ -124,7 +124,7 @@ las fechas de ambos se regirán por las que indique el ganador.
 hasta el 28 de febrero del 2024.
             <br />
             d) El pasaje podrá ser utilizado en el siguiente periodo: 20 de
-            marzo al 23 de abril del 2023. Cualquier cambio (especificados en el
+            marzo al 23 de abril del 2024. Cualquier cambio (especificados en el
             punto a) y b) serán de responsabilidad del ganador, el cual deberá
             asumir los gastos que esto implique.
             <br />

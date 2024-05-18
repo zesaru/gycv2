@@ -128,15 +128,13 @@ hasta el 28 de febrero del 2024.
             punto a) y b) serán de responsabilidad del ganador, el cual deberá
             asumir los gastos que esto implique.
             <br />
-            e) El pasaje podrá ser utilizado en el siguiente periodo: 25 de marzo al
-26 de abril del 2024. Cualquier cambio (especificados en el punto a)
-y b) serán de responsabilidad del ganador, el cual deberá asumir los
-gastos que esto implique.
-            <br />
-            f) Las ciudades para las salidas de los vuelos ganadores serán: Kansai,
-Chubu Nagoya, Haneda y Narita.
-            <br />
-            g)Si el destino final es indicado en otras fechas, hacia otra ciudad y/o
+            e) El pasaje podrá ser endosado a terceros. Los costos que se deriven
+del endose correrán a cargo del ganador del pasaje. G&amp;C
+Corporation no se responsabiliza por el pago adicional y/o la pérdida
+del pasaje.<br />
+f) Las ciudades para las salidas de los vuelos ganadores serán: Kansai,
+Chubu Nagoya, Haneda y Narita.<br />
+g) Si el destino final es indicado en otras fechas, hacia otra ciudad y/o
 aumentar el(los) día(s) de hospedaje, los gastos correrán por
 cuenta del ganador.
             <br />

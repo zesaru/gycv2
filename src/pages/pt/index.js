@@ -1,5 +1,5 @@
 import React from "react"
-import Sliders from "./components/slider"
+import Sliders from "../../components/sliders"
 import Layout from "../../components/layoutp"
 import SEO from "../../components/seo"
 import { Smallbanners } from "../../components/smallbanners"

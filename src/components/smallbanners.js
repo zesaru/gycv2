@@ -34,7 +34,7 @@ export const Smallbanners = () => {
                 <GatsbyImage image={node.image.gatsbyImageData} alt={node.name}/>
               </Link>
             ) : (
-              <Link to={url ? `/productos/${url}/` : '/'}>
+              <Link to={url ? `productos/${url}/` : `/`}>
                 <GatsbyImage
                   image={node.image.gatsbyImageData}
                   alt={node.name}

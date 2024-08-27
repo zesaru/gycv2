@@ -7,7 +7,7 @@ const ganadores = () => {
     <Layout>
       <main className="contenedor">
         <div className="my-3 bg-white text-center">
-          <StaticImage
+          {/* <StaticImage
             src="http://images.ctfassets.net/uf4sk9fqckkz/C9j0HRB6cklHudACOT7Gh/74bdbf0c7b8811454c9e9d3cbc7ca1d7/plantilla-campan__apaneton-ganadores-jap-2023.jpg"
             alt="ganadores"
           />
@@ -22,7 +22,7 @@ const ganadores = () => {
           <StaticImage
             src="https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/331889384_880323119752188_3515669054335358693_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=EF5ZypjxoDEAX_L73Jc&_nc_ht=scontent-nrt1-1.xx&oh=00_AfDCQerKzWvE2szElb9BqaDurRxFg0TyJRmYiu66RTX6sA&oe=63F754F1"
             alt="ganadores"
-          />
+          /> */}
         </div>
       </main>
     </Layout>

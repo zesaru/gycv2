@@ -7,39 +7,31 @@ const logo = 'https://images.ctfassets.net/uf4sk9fqckkz/2HdqAVJ8Maj42qt1PbFYze/9
 const Footer = () => {
   return (
     <footer className="row">
-
       <div className="left">
         <img src={logo} />
       </div>
 
-      <div className="center">
-
-      </div>
+      <div className="center"></div>
 
       <div className="right">
         <div className="imagen-face">
-          <img src={facebook} alt={facebook} />
+          <a
+            href="https://www.facebook.com/GyC.Corporation/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src={facebook} alt="Icon Facebook" />
+          </a>
         </div>
         <p className="footer-links">
-          <Link to='/jp/'>
-            ホーム
-          </Link>
-          |
-          <Link to='/jp/empresa'>
-            会社概要
-          </Link>          |
-          <Link to='/jp/contacto'>
-            お問い合わせ
-          </Link>
-          |
-          <Link to='/jp/registro'>
-          登録
-          </Link>
+          <Link to="/jp/">ホーム</Link>|<Link to="/jp/empresa">会社概要</Link> |
+          <Link to="/jp/contacto">お問い合わせ</Link>|
+          <Link to="/jp/registro">登録</Link>
         </p>
         {/* <p className="footer-company-name">© {new Date().getFullYear()}</p> */}
-
       </div>
-    </footer>);
+    </footer>
+  )
 };
 
 export default Footer;

@@ -8,20 +8,20 @@ import styled from "styled-components"
 
 const logo = 'https://images.ctfassets.net/uf4sk9fqckkz/2HdqAVJ8Maj42qt1PbFYze/9207cc73ee0d4a3c00344452fc796a7e/logo5.png';
 
-const LinkSeeMore = styled(Link)`
-  padding: 7px 10px;
-  border: none;
-  background: #00479a;
-  border-radius: 30px;
-  box-sizing: border-box;
-  font-weight: 500;
-  font-size: 10px;
-  color: white;
-  cursor: cursor;
-  @media screen and (min-width: 1024px) {
-    font-size: 20px;
-  }
-`
+// const LinkSeeMore = styled(Link)`
+//   padding: 7px 10px;
+//   border: none;
+//   background: #00479a;
+//   border-radius: 30px;
+//   box-sizing: border-box;
+//   font-weight: 500;
+//   font-size: 10px;
+//   color: white;
+//   cursor: cursor;
+//   @media screen and (min-width: 1024px) {
+//     font-size: 20px;
+//   }
+// `
 const Inner = styled.div`
   padding: 0 70px;
   box-sizing: border-box;

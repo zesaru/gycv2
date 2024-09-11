@@ -18,7 +18,9 @@ const Footer = () => {
 
       <div className="right">
         <div className="imagen-face">
-          <img src={facebook}  alt={facebook}/>
+          <a href="https://www.facebook.com/GyC.Corporation/" target='_blank' rel="noopener">
+          <img src={facebook}  alt='Icon Facebook'/>
+          </a>
         </div>
         <p className="footer-links">
           <Link to='/'>

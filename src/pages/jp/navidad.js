@@ -65,10 +65,10 @@ const navidad = () => {
             <br />
             9. 送付先：
             <span className="pl-5 block">
-            (株) G&C CORPORATION本社 〒511-0001三重県桑名市上之輪新田1418番地
+            (株) G&C CORPORATION本社 〒511-0001三重県桑名市上之輪新田1418番地 
             </span>
             <span className="pl-5 block">
-            (株) G&C CORPORATION美濃加茂営業所 〒505-0052　岐阜県美濃加茂市加茂野町今泉1261番地
+            (株) G&C CORPORATION美濃加茂営業所 〒505-0052　岐阜県美濃加茂市加茂野町今泉1261-1番地 
             </span>
             <br />
             <Subtitle>応募事項：</Subtitle>

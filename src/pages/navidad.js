@@ -34,7 +34,7 @@ const navidad = () => {
             <br />
             1. Serán 55 premios los que se sortearán.
             <br />
-            a) a) Cinco (05) pasajes dobles a la ciudad de Okinawa (el titular
+            a) Cinco (05) pasajes dobles a la ciudad de Okinawa (el titular
             del cupón ganador podrá llevar a un (1) solo acompañante) con
             hospedaje de 4 días y 3 noches (1 sola habitación doble x ganador).
             <br />

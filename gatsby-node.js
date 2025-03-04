@@ -1,102 +1,78 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
+
+// You can delete this file if you're not using it
 const path = require("path")
 
-// Función para crear páginas con soporte mejorado para Gatsby 4
-exports.createPages = async ({ graphql, actions, reporter }) => {
+module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  const productTemplate = path.resolve("./src/templates/product.js")
+  const productTemplateP = path.resolve("./src/templates/productp.js")
+  const productTemplateJ = path.resolve("./src/templates/productj.js")
 
-  // Definir rutas de plantillas de manera más flexible
-  const templates = {
-    esp: path.resolve("./src/templates/product.js"),
-    port: path.resolve("./src/templates/productp.js"),
-    jp: path.resolve("./src/templates/productj.js")
-  }
 
-  // Consulta GraphQL con mejores prácticas de Gatsby 4
-  const result = await graphql(`
+  const res = await graphql(`
     query {
-      esp: allContentfulBrands(filter: { language: { eq: "es" } }) {
-        nodes {
-          id
-          title
-          slug
-          language
+      esp:allContentfulBrands {
+        edges {
+          node {
+            id
+            title
+            slug
+          }
         }
       }
-      port: allContentfulBrands(filter: { language: { eq: "pt" } }) {
-        nodes {
-          id
-          title
-          slug
-          language
+      port:allContentfulBrands {
+        edges {
+          node {
+            id
+            title
+            slug
+          }
         }
       }
-      jp: allContentfulBrands(filter: { language: { eq: "ja" } }) {
-        nodes {
-          id
-          title
-          slug
-          language
+      jp:allContentfulBrands {
+        edges {
+          node {
+            id
+            title
+            slug
+          }
         }
       }
     }
   `)
-
-  // Manejo de errores mejorado
-  if (result.errors) {
-    reporter.panicOnBuild('Error al cargar marcas', result.errors)
-    return
-  }
-
-  // Función de creación de páginas reutilizable
-  const createProductPages = (brands, language, template) => {
-    brands.forEach((brand) => {
-      // Ruta base con prefijo de idioma
-      const basePath = language === 'es' ? '/productos' : `/${language}/productos`
-      
-      createPage({
-        path: `${basePath}/${brand.slug}`,
-        component: template,
-        context: {
-          id: brand.id,
-          slug: brand.slug,
-          language: language
-        },
-        // Opciones de generación de páginas en Gatsby 4
-        defer: true // Aplaza la generación de páginas para mejorar el rendimiento de la compilación
-      })
+  if (res.errors) throw res.errors
+  res.data.esp.edges.forEach(({ node }) => {
+    createPage({
+      path: `/productos/${node.slug}`,
+      component: productTemplate,
+      context: {
+        slug: node.slug,
+      },
     })
-  }
+  })
 
-  // Crear páginas para cada idioma
-  createProductPages(result.data.esp.nodes, 'es', templates.esp)
-  createProductPages(result.data.port.nodes, 'pt', templates.port)
-  createProductPages(result.data.jp.nodes, 'jp', templates.jp)
-}
-
-// Opcional: Configuración de los tipos de nodos para tipos personalizados
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  
-  createTypes(`
-    type ContentfulBrands implements Node {
-      id: ID!
-      title: String!
-      slug: String!
-      language: String!
-    }
-  `)
-}
-
-// Opcional: Hook para transformar los datos de los nodos antes de la creación de páginas
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  // Ejemplo de cómo añadir campos personalizados
-  if (node.internal.type === 'ContentfulBrands') {
-    createNodeField({
-      node,
-      name: 'fullSlug',
-      value: `/productos/${node.slug}`
+  res.data.port.edges.forEach(({ node }) => {
+    createPage({
+      path: `/pt/productos/${node.slug}`,
+      component: productTemplateP,
+      context: {
+        slug: node.slug,
+      },
     })
-  }
+  })
+
+  res.data.jp.edges.forEach(({ node }) => {
+    createPage({
+      path: `/jp/productos/${node.slug}`,
+      component: productTemplateJ,
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
 }

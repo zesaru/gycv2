@@ -27,7 +27,6 @@ export const query = graphql`
               width: 550
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
-              quality: 80
             )
           }
           imagethum {
@@ -35,7 +34,6 @@ export const query = graphql`
               width: 120
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
-              quality: 100
             )
           }
           brand {
@@ -46,7 +44,6 @@ export const query = graphql`
                 width: 1300
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
-                quality: 100
               )
             }
           }

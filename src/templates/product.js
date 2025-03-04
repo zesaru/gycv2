@@ -4,7 +4,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Card from "../components/card"
 import "./product.css"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 

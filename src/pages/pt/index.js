@@ -8,10 +8,10 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <main className="contenedor">
-      <article>
-        <Sliders></Sliders>
-      </article>
-      <Smallbanners></Smallbanners>
+        <article>
+          <Sliders></Sliders>
+        </article>
+      <Smallbanners></Smallbanners>    
     </main>
   </Layout>
 )

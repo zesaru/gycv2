@@ -19,7 +19,7 @@ const Footer = () => {
           <a
             href="https://www.facebook.com/GyC.Corporation/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <img src={facebook} alt="Icon Facebook" />
           </a>

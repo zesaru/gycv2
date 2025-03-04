@@ -26,16 +26,16 @@ export const Smallbanners = () => {
   return (
     <div className="secundary-menu-container">
       {data.allContentfulSmallbanners.nodes.map(node => {
+        const url = node.url || '';
         return (
           <div className="secundary-menu-container-item" key={node.id}>
             {node.url === "ganadores-sevebuenazo2022" ||
-            node.url === "se_bebe_buenazo_2022" ||
-            node.url === "navidad" ? (
+            node.url === "se_bebe_buenazo_2022" ? (
               <Link to={`${node.url}`}>
                 <GatsbyImage image={node.image.gatsbyImageData} />
               </Link>
             ) : (
-              <Link to={`/productos/${node.url}`}>
+              <Link to={url ? `productos/${url}/` : `/`}>
                 <GatsbyImage
                   image={node.image.gatsbyImageData}
                   alt={node.name}

@@ -5,9 +5,31 @@ import Layout from "../components/layout"
 import Card from "../components/card"
 import "./product.css"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+
+
+const richTextOptions = {
+  renderMark: {
+    [MARKS.BOLD]: text => <strong>{text}</strong>, // Renderiza negritas
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <p className="mb-4">{children}</p>, // Espacios entre párrafos
+    [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc ml-6">{children}</ul>, // Listas con viñetas
+    [BLOCKS.OL_LIST]: (node, children) => <ol className="list-decimal ml-6">{children}</ol>, 
+    [BLOCKS.QUOTE]: (node, children) => <blockquote className="border-l-4 pl-4 italic">{children}</blockquote> // Citas estilizadas
+  }
+};
+
+const ProductDescription = ({ description }) => {
+  if (!description || !description.raw) {
+    return <p>No hay descripción disponible.</p>; 
+  }
+  return <div>{documentToReactComponents(JSON.parse(description.raw), richTextOptions)}</div>;
+};
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     allContentfulProducts(
       filter: { brand: { slug: { eq: $slug } } }
       sort: { fields: name }
@@ -71,7 +93,7 @@ const product = props => {
                   image={edge.node.imagethum.gatsbyImageData}
                   name={edge.node.name}
                   imagefluid={edge.node.productimage.gatsbyImageData}
-                  description={renderRichText(edge.node.description)}
+                  description={<ProductDescription description={edge.node.description} />}
                 />
               )
             })}

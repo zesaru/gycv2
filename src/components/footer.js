@@ -16,7 +16,7 @@ const Footer = () => {
 
       <div className="right">
         <div className="imagen-face">
-          <img src={facebook} alt="imagen-facebook" />
+          <img src={facebook}  alt={facebook}/>
         </div>
         <p className="footer-links">
           <Link to="/">Inicio</Link>|<Link to="/empresa">Empresa</Link> |
@@ -24,9 +24,9 @@ const Footer = () => {
           <Link to="/registro">Registrarse</Link>
         </p>
         {/* <p className="footer-company-name">© {new Date().getFullYear()}</p> */}
+
       </div>
-    </footer>
-  )
-}
+    </footer>);
+};
 
 export default Footer

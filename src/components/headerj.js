@@ -38,7 +38,7 @@ const Header = () => {
   const data= useStaticQuery(graphql`
     query {
       allContentfulBrands(
-        sort: { fields: title }
+        sort: { title: ASC }
         filter: { node_locale: { eq: "en-US" } }
       ) {
         edges {

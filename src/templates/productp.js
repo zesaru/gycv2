@@ -10,7 +10,7 @@ export const query = graphql`
   query($slug: String!) {
     allContentfulProducts(
       filter: { brand: { slug: { eq: $slug } } }
-      sort: { fields: name }
+      sort: { name: ASC }
     ) {
       edges {
         node {

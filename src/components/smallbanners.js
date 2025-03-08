@@ -6,7 +6,7 @@ import "./smallbanners.css"
 export const Smallbanners = () => {
   const data = useStaticQuery(graphql`
     query smallBanners {
-      allContentfulSmallbanners(sort: { fields: name }) {
+      allContentfulSmallbanners(sort: { name: ASC }) {
         nodes {
           image {
             id

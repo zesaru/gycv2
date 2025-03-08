@@ -1,10 +1,10 @@
   
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import './sliders.css';
-import styled from "styled-components"
+// import styled from "styled-components"
 
 const logo = 'https://images.ctfassets.net/uf4sk9fqckkz/2HdqAVJ8Maj42qt1PbFYze/9207cc73ee0d4a3c00344452fc796a7e/logo5.png';
 
@@ -22,23 +22,23 @@ const logo = 'https://images.ctfassets.net/uf4sk9fqckkz/2HdqAVJ8Maj42qt1PbFYze/9
 //     font-size: 20px;
 //   }
 // `
-const Inner = styled.div`
-  padding: 0 70px;
-  box-sizing: border-box;
-  position: absolute;
-  width: 100%;
-  top: 85%;
-  left: 80%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-`
+// const Inner = styled.div`
+//   padding: 0 70px;
+//   box-sizing: border-box;
+//   position: absolute;
+//   width: 100%;
+//   top: 85%;
+//   left: 80%;
+//   -webkit-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+// `
 
 const Sliders = () => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulBanners (
         sort: {
-          fields:name
+          name:ASC
         }
       ){
         edges {

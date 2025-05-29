@@ -26,7 +26,7 @@ const sebebebuenazo = () => {
           <br />
           <h5>Del concurso:</h5>
           <Parrafo>
-            1. La finalidad de este concurso es la de compartir frases alusivas "cheleras", cuando brindamos con una de nuestras 3 marcas de cervezas peruanas: Cusqueña, Pilsen Callao o Cristal; en ocasión de la celebración del Día del Padre (3er domingo de junio)
+            1. La finalidad de este concurso es la de compartir frases alusivas "cheleras", cuando brindamos con una de nuestras 3 marcas de cervezas que importamos: Cusqueña, Pilsen Callao o Club Colombia; en ocasión de la celebración del Día del Padre (3er domingo de junio)
 
             <br />
             2. Las frases a expresar son libres; tomando en consideración de no exagerar con un vocabulario soez y proclive a la finalidad del mismo.
@@ -38,14 +38,14 @@ const sebebebuenazo = () => {
             4. No promovemos el consumo de bebidas alcohólicas para este concurso. Las botellas pueden estar sin destapar para la edición del video.
 
             <br />
-            5. Serán 3 ganadores que recibirán -cada uno- una caja (24 unidades) de cada marca de cerveza peruana (72 unidades en total) y un set de vasos cerveceros.
+            5. Serán 3 ganadores que recibirán -cada uno- una caja (24 unidades) de cada marca de cerveza (72 unidades en total) y un set de vasos cerveceros.
 
             <br />
             6. Los menores de 20 años quedan prohibidos de participar.
             <br />
-            7. Se recibirá un video por participante, no mas de 20 segundos, hasta las 20 horas del día jueves 12 de junio, vía correo electrónico.
+            7. Se recibirá un video por participante, no mas de 20 segundos, hasta las 20 horas del día jueves 19 de junio, vía correo electrónico.
             <br />
-            8. El resultado del concurso se conocerá el día 14 de junio del presente año y se publicará en los diversos medios de la colectividad, así como en la página web de G&C Corporation y Facebook institucional
+            8. El resultado del concurso se conocerá el día 24 de junio del presente año y se publicará en los diversos medios de la colectividad, así como en la página web de G&C Corporation y Facebook institucional
 
             <br />
             9. El correo electrónico habilitado para el concurso es sebebebuenazo@gyc-corp.com 
@@ -88,7 +88,7 @@ const sebebebuenazo = () => {
             <br />
             1. Autoriza a G&C Corporation la publicación de sus datos a fin de dar a conocer los resultados del concurso.
             <br />
-            2. Los videos de los 3 ganadores serán publicados en nuestro Facebook corporativo; así como haremos una toma de alguna parte del video para publicarlo en el almanaque corporativo del 2025, que será distribuido en diciembre del presente año, con las reseñas del concurso.
+            2. Los videos de los 3 ganadores serán publicados en nuestro Facebook corporativo; así como haremos una toma de alguna parte del video para publicarlo en el almanaque corporativo del 2026, que será distribuido en diciembre del presente año, con las reseñas del concurso.
             <br />
             3. Los 3 premios serán enviados directamente a las direcciones ganadoras, previa comunicación telefónica y con la acreditación de contar con mayoría de edad a través de algún documento personal (brevete, DNI, pasaporte, tarjeta de residencia (Zairyu Kado), seguro de salud, etc.)
             <br />

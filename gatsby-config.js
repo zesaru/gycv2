@@ -75,24 +75,26 @@ module.exports = {
       options: {
         excludes: [`/404/`, `/404.html`, `/dev-404-page/`],
         createLinkInHead: true,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            const url = site.siteMetadata.siteUrl + edge.node.path
-            const isJapanese = edge.node.path.startsWith('/jp/')
-            const isPortuguese = edge.node.path.startsWith('/pt/')
-            const lang = isJapanese ? 'ja' : isPortuguese ? 'pt' : 'es'
+        serialize: ({ site, allSitePage }) => {
+          const pages = allSitePage.nodes || allSitePage.edges?.map(edge => edge.node) || []
+          
+          return pages.map(page => {
+            const url = site.siteMetadata.siteUrl + page.path
+            const isJapanese = page.path.startsWith('/jp/')
+            const isPortuguese = page.path.startsWith('/pt/')
             
             return {
               url,
-              changefreq: edge.node.path === '/' ? 'daily' : 'weekly',
-              priority: edge.node.path === '/' ? 1.0 : 0.8,
+              changefreq: page.path === '/' ? 'daily' : 'weekly',
+              priority: page.path === '/' ? 1.0 : 0.8,
               links: [
-                { lang: 'es', url: site.siteMetadata.siteUrl + edge.node.path.replace(/^\/(jp|pt)/, '') },
-                { lang: 'ja', url: site.siteMetadata.siteUrl + '/jp' + edge.node.path.replace(/^\/(jp|pt)/, '') },
-                { lang: 'pt', url: site.siteMetadata.siteUrl + '/pt' + edge.node.path.replace(/^\/(jp|pt)/, '') },
+                { lang: 'es', url: site.siteMetadata.siteUrl + page.path.replace(/^\/(jp|pt)/, '') },
+                { lang: 'ja', url: site.siteMetadata.siteUrl + '/jp' + page.path.replace(/^\/(jp|pt)/, '') },
+                { lang: 'pt', url: site.siteMetadata.siteUrl + '/pt' + page.path.replace(/^\/(jp|pt)/, '') },
               ]
             }
           })
+        }
       },
     },
     {

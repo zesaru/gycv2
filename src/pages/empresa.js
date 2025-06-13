@@ -1,11 +1,34 @@
 import React from 'react';
 import Layout from '../components/layout';
+import Seo from '../components/seo';
+import StructuredData, { createOrganizationData } from '../components/structured-data';
+import { useStaticQuery, graphql } from 'gatsby';
 import './empresa.css';
 import empresajpg from '../static/img/empresa.jpg'
 
 const empresa = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `)
+
+  const siteUrl = data.site.siteMetadata.siteUrl
+
   return (
-    <Layout >
+    <Layout>
+      <Seo 
+        title="Nuestra Empresa - G&C Corporation" 
+        description="Conoce la historia, misión y visión de G&C Corporation, importadora y distribuidora líder de bebidas y alimentos peruanos en Japón desde 2015."
+        keywords="G&C Corporation, empresa importadora, distribuidora Japón, historia empresa, misión visión, productos peruanos"
+        lang="es"
+        url="/empresa"
+      />
+      <StructuredData data={createOrganizationData(siteUrl)} />
       <main className="contenedor">
         <article>
 

@@ -51,6 +51,10 @@
 	overflow: hidden;
   }
   
+  .slider-wrapper .swiper-slide {
+	height: 380px;
+  }
+  
   .slide {
 	height: 380px;
 	background-size: cover !important;
@@ -106,6 +110,12 @@
   
   .slider-content {
 	text-align: center;
+	height: 380px;
+	background-size: cover !important;
+	background-position: center center !important;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
   }
   
   .slider-content .inner {
@@ -171,7 +181,7 @@
   }
 
   @media screen and (max-width: 768px) {
-	.slider-wrapper, .slide {
+	.slider-wrapper, .slide, .slider-wrapper .swiper-slide, .slider-content {
 	  height: 200px;
 	}   
 	
@@ -182,7 +192,7 @@
   }  
 
   @media screen and (max-width: 420px) {
-	.slider-wrapper, .slide {
+	.slider-wrapper, .slide, .slider-wrapper .swiper-slide, .slider-content {
 		height: 108px;
 	}   
 

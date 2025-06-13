@@ -1,8 +1,11 @@
   
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import './sliders.css';
 // import styled from "styled-components"
 
@@ -56,24 +59,37 @@ const Sliders = () => {
     }
   `);
   return (
-    <Slider autoplay duration={4000} className="slider-wrapper">
+    <Swiper
+      modules={[Autoplay, Pagination, Navigation]}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      loop={true}
+      className="slider-wrapper"
+    >
       {data.allContentfulBanners.edges.map((edge) => {
         return (
-          <div key={edge.node.id} className="slider-content" style={{ background: `url('${edge.node.image.file.url}') no-repeat center center` }} >
-            <section>
-              <img src={logo} alt={edge.node.name} />
-            </section>
-            {/* <Inner>
-              <LinkSeeMore to="/sevebuenazo">
-                Reglamento
-              </LinkSeeMore>
-            </Inner>  */}
-          </div>
+          <SwiperSlide key={edge.node.id}>
+            <div className="slider-content" style={{ background: `url('${edge.node.image.file.url}') no-repeat center center` }} >
+              <section>
+                <img src={logo} alt={edge.node.name} />
+              </section>
+              {/* <Inner>
+                <LinkSeeMore to="/sevebuenazo">
+                  Reglamento
+                </LinkSeeMore>
+              </Inner>  */}
+            </div>
+          </SwiperSlide>
         )
       })
       }
-
-    </Slider>
+    </Swiper>
   );
 }
 export default Sliders;

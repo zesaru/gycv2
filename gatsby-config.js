@@ -5,8 +5,13 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `G&C Corp`,
-    description: `.`,
-    author: `@zesarum`,
+    description: `G&C Corp - Importadora y distribuidora líder de bebidas y alimentos de calidad en Japón. Encuentra las mejores marcas peruanas y productos premium para tu negocio.`,
+    author: `@gycorporation`,
+    siteUrl: `https://gyc-corp.com`,
+    keywords: `bebidas peruanas, alimentos importados, distribuidora Japón, G&C Corp, productos de calidad, cerveza peruana, Cusqueña, Pilsen, Cristal, importación alimentos`,
+    image: `/images/gyc-logo-social.jpg`,
+    twitterUsername: `@gycorporation`,
+    lang: `es`,
   },
   plugins: [
     {
@@ -50,18 +55,80 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `G&C Corporation - Importadora y Distribuidora`,
+        short_name: `G&C Corp`,
+        description: `Importadora y distribuidora líder de bebidas y alimentos de calidad en Japón`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#ffffff`,
+        theme_color: `#00479a`,
+        display: `standalone`,
         icon: `src/images/gyc_logo.jpeg`,
         include_favicon: true,
+        cache_busting_mode: `query`,
+        crossOrigin: `use-credentials`,
+        lang: `es`,
+        categories: [`business`, `food`, `beverage`],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/404/`, `/404.html`, `/dev-404-page/`],
+        createLinkInHead: true,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            const url = site.siteMetadata.siteUrl + edge.node.path
+            const isJapanese = edge.node.path.startsWith('/jp/')
+            const isPortuguese = edge.node.path.startsWith('/pt/')
+            const lang = isJapanese ? 'ja' : isPortuguese ? 'pt' : 'es'
+            
+            return {
+              url,
+              changefreq: edge.node.path === '/' ? 'daily' : 'weekly',
+              priority: edge.node.path === '/' ? 1.0 : 0.8,
+              links: [
+                { lang: 'es', url: site.siteMetadata.siteUrl + edge.node.path.replace(/^\/(jp|pt)/, '') },
+                { lang: 'ja', url: site.siteMetadata.siteUrl + '/jp' + edge.node.path.replace(/^\/(jp|pt)/, '') },
+                { lang: 'pt', url: site.siteMetadata.siteUrl + '/pt' + edge.node.path.replace(/^\/(jp|pt)/, '') },
+              ]
+            }
+          })
+      },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://gyc-corp.com`,
+        sitemap: `https://gyc-corp.com/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }]
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/empresa/`, `/contacto/`],
+        workboxConfig: {
+          globPatterns: ['**/*'],
+          runtimeCaching: [
+            {
+              urlPattern: /(\.js$|\.css$|static\/)/,
+              handler: `CacheFirst`,
+            },
+            {
+              urlPattern: /^https?:.*\/page-data\/.*\.json/,
+              handler: `StaleWhileRevalidate`,
+            },
+            {
+              urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+              handler: `StaleWhileRevalidate`,
+            },
+            {
+              urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+              handler: `StaleWhileRevalidate`,
+            },
+          ],
+        },
+      },
+    },
   ],
 }
